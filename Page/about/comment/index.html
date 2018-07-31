@@ -1,0 +1,82 @@
+<html>
+    <head>
+      <title>Admin System</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Mitr" rel="stylesheet">
+      <!--Include firebase.js  -->
+      <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+        <link rel="stylesheet" href="style.css">
+      
+      <!--Configure firebase-->
+      <script>
+      var txt_title,txt_content,txt_img ='';
+      var config = {
+        apiKey: "AIzaSyCoq-3D56R1aKlJejQj9K0oIpdrbkUmT0k",
+        authDomain: "web-elements-and-compounds.firebaseapp.com",
+        databaseURL: "https://web-elements-and-compounds.firebaseio.com",
+        projectId: "web-elements-and-compounds",
+        storageBucket: "web-elements-and-compounds.appspot.com",
+        messagingSenderId: "89391188732"
+    };
+    firebase.initializeApp(config);
+      var database = firebase.database();
+      database.ref("app/").once('child_added', function(snapshot){
+            if(snapshot.exists()){
+                var content = '';
+                snapshot.forEach(function(data){
+                    var val = data.val();
+                    // console.log("row",data.val());
+                    // console.log("title",data.getKey());
+                  
+                    content +='<tr>';
+                    content += '<td>' + val.Name + '</td>';
+                    content += '<td>' + val.Message + '</td>';
+                    content += '<td>' + val.Email + '</td>';
+                    content += '<td>' + val.Date + '</td>';
+                    content += '</tr>';
+                    
+                });
+                var theDiv = document.getElementById("ex-table");
+                theDiv.innerHTML += content; 
+                //$('#ex-table').append(content);
+            }
+      });
+      </script>
+    </head>
+    
+    <body>
+    <div class="menuber">
+        <div class="container">
+            <div class="text_menuber">
+               <div class="text_menuber_head">Comment System</div> <p>For Web Elements and Compounds</p>
+            </div>
+            <div class="text_menuber2">
+                <a href="../../../index.html">ไปยังหน้าแรก</a>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <center>
+         <div class="table_main">
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:40%;" id="ex-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Message</th>
+              <th>Email</th>
+              <th>Date  </th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+    </div>
+    </center>
+   
+ </body>
+</html>

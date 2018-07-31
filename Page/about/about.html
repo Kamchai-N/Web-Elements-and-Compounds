@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>เกี่ยวกับ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="shortcut icon" href="../../img/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var scrollTop = $(this).scrollTop();
+            // console.log(scrollTop);
+            if(scrollTop >= 150){ 
+                $('.menu').css('background','#000000a6').css('transition','background 1s');
+            }else{
+                $('.menu').css('background','none');
+            }
+        });
+    </script>
+</head>
+<body>
+        <div class="UpdateTag">
+                <h2>กำลังอยู่ในช่วงปรับปรุง...</h2>
+            </div>
+    <header>
+        <div class="area-main">
+            <div class="menu">
+                <div class="container">
+                    <div class="txt-lowgo">
+                        <h1>Elements and Compounds</h1>
+                    </div>
+                    <nav role="navigation" class="navigation">
+                        <ul>
+                            <li><a href="../../index.html">หน้าแรก</a></li>
+                            <li><a href="../learn/mainlern1.html">เรียนรู้ธาตุและสารประกอบ</a></li>                                             
+                            <li><a href="../periodictable/periodictable.html">ตารางธาตุ</a></li>
+                            <li><a href="#">ห้องทดลอง</a></li> 
+                            <li><a href="about.html">เกี่ยวกับ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="txt-area">
+                <h1>เกี่ยวกับ</h1>
+                <h2>About Us</h2>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main_part_1">
+            <h2>Contact</h2>
+            <div class="contact_name">
+                สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคเชียงใหม่
+                <br> เลขที่ 9 ถ.เวียงแก้ว ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50300 <br> <br>
+                <img src="http://it.cmtc.ac.th/web2017/photo/upload/2018/1525749384_2030-org.png"> Facebook : <a href="https://www.facebook.com/itcmtc">https://www.facebook.com/itcmtc</a>
+                <br>
+                <br>
+                <img src="https://www.freeiconspng.com/uploads/website-icon-11.png"> Web : <a href="http://it.cmtc.ac.th/web2017/">http://it.cmtc.ac.th/web2017/</a>
+                <br>
+                <br>
+                <br>
+                <div class="copyright_th">
+                    เว็บไซต์นี้จัดทำเพื่อการศึกษา มิได้มีเจตนาละเมิดลิขสิทธิ์
+                    <br> และไม่มีการซื้อขายจริงในเว็บไซต์นี้
+                </div>
+            </div>
+            
+        </div>
+        <div class="main_part_2">
+            <div class="form">
+                <input type="text" id="name" placeholder="Your Name.."> <br>
+                <input type="email" id="email" placeholder="Your Email.."> <br>
+                <textarea id="message" cols="30" rows="10" placeholder="Message"></textarea> <br>
+                <!-- <button  onclick="myFunction()" value="Submit">Submit</button> -->
+                <input type="submit" value="Submit" onclick="myFunction()">
+                <h2 id="success" style="color: rgb(130, 255, 125);padding-left: 100px;"> </h2>
+            </div>
+                
+            
+        </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60433.126520626596!2d99.00321005834962!3d18.795015361350625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe41f657fc5052416!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LiZ4Li04LiE4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1531715076885" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCoq-3D56R1aKlJejQj9K0oIpdrbkUmT0k",
+        authDomain: "web-elements-and-compounds.firebaseapp.com",
+        databaseURL: "https://web-elements-and-compounds.firebaseio.com",
+        projectId: "web-elements-and-compounds",
+        storageBucket: "web-elements-and-compounds.appspot.com",
+        messagingSenderId: "89391188732"
+    };
+    firebase.initializeApp(config);
+    </script>
+     <script src="main.js"></script>
+</body>
+</html>

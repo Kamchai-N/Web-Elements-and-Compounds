@@ -1,0 +1,422 @@
+// Mixins
+
+.transition(@args) {
+    -webkit-transition: @args;
+            transition: @args;
+  }
+  
+  .transform(@args) {
+    -webkit-transform: @args;
+        -ms-transform: @args;
+            transform: @args;
+  }
+  
+  .transform-origin(@args) {
+    -webkit-transform-origin: @args;
+        -ms-transform-origin: @args;
+            transform-origin: @args;
+  }
+  
+  *{
+    margin: 0 auto;
+    padding: auto;
+  }
+  // Styles
+  body {
+    font-family: Arial;
+    .transform(translateZ(0)); // prevent flashing
+  }
+  
+  .periodic {background: rgb(248, 239, 239);
+    padding-top: 30px;
+    position: relative;
+    height: 200px;
+    margin-right: -1px;
+    text-shadow: none;
+  }
+  
+  .periodic-row {
+    clear: both;
+        height: 10%;
+  }
+  
+  .cell {
+    float: left;
+    position: relative;
+    width: 5.55%;
+    height: 100%;
+  }
+  
+  .element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 1px;
+    right: 1px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    .transition(all 200ms ease);
+    
+    background-color: rgba(0, 128, 128, 0.6);
+  }
+  
+  .cell:hover .element {
+    border-color: rgba(0,0,0,0.1);
+    .transform(scale(3,3));
+    z-index: 1;
+    
+    background-color: rgba(0, 128, 128, 0.9);
+  }
+  
+  .at_num,
+  .at_details {
+    position: absolute;
+    font-size: 4px;
+    color: rgba(255,255,255,0.5);
+    opacity: 0;
+  }
+  
+  .at_num {
+    top: 4px;
+    right: 5px;
+  }
+  
+  .symbol {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin-top: -4px;
+    font-size: 9px;
+    line-height: 1;
+    height: 9px;
+    color: rgba(255,255,255,0.9);
+  }
+  
+  .at_details {
+    bottom: 4px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  // styles based on nth-child
+  .cell:nth-child(-n+2) .element,
+  .cell:nth-child(n+13) .element {
+    background-color: rgba(0, 160, 96, 0.6);
+  }
+  
+  .cell:nth-child(1) .element,
+  .periodic-row:nth-child(2) .cell:nth-child(n+14) .element,
+  .periodic-row:nth-child(3) .cell:nth-child(n+15) .element,
+  .periodic-row:nth-child(4) .cell:nth-child(n+16) .element,
+  .periodic-row:nth-child(5) .cell:nth-child(n+17) .element {
+    background-color: rgba(0, 192, 64, 0.6);
+  }
+  
+  .periodic-row:nth-child(-n+6) .cell:nth-child(18) .element {
+    background-color: rgba(64, 192, 0, 0.6);
+  }
+  
+  .periodic-row:nth-child(n+9) .element {
+    background-color: rgba(0, 96, 160, 0.6);
+  }
+  
+  // hover styles
+  .cell:nth-child(-n+2):hover .element,
+  .cell:nth-child(n+13):hover .element {
+    background-color: rgba(0, 160, 96, 0.9);
+  }
+  
+  .cell:nth-child(1):hover .element,
+  .periodic-row:nth-child(2) .cell:nth-child(n+14):hover .element,
+  .periodic-row:nth-child(3) .cell:nth-child(n+15):hover .element,
+  .periodic-row:nth-child(4) .cell:nth-child(n+16):hover .element,
+  .periodic-row:nth-child(5) .cell:nth-child(n+17):hover .element {
+    background-color: rgba(0, 192, 64, 0.9);
+  }
+  
+  .periodic-row:nth-child(-n+6) .cell:nth-child(18):hover .element {
+    background-color: rgba(64, 192, 0, 0.9);
+  }
+  
+  .periodic-row:nth-child(n+9) .cell:hover .element {
+    background-color: rgba(0, 96, 160, 0.9);
+  }
+  
+  // hover state positioning
+  // left hand column
+  .cell:nth-child(1) .element {
+    .transform-origin(0 50%);
+  }
+  
+  // right hand column
+  .cell:nth-child(18) .element {
+    .transform-origin(100% 50%);
+  }
+  
+  // bottom row
+  .periodic-row:nth-child(10) .cell .element {
+    .transform-origin(50% 100%);
+  }
+  
+  // top left corner
+  .periodic-row:nth-child(1) .cell:nth-child(1) .element {
+    .transform-origin(0 0);
+  }
+  
+  // top right corner
+  .periodic-row:nth-child(1) .cell:nth-child(18) .element {
+    .transform-origin(100% 0);
+  }
+  
+  // bottom right corner
+  .periodic-row:nth-child(10) .cell:nth-child(18) .element {
+    .transform-origin(100% 100%);
+  }
+  
+  // Media queries to change size of table
+  // small tablet portrait
+  @media (min-width: 600px) {
+    .periodic {
+      height: 460px;
+      margin-right: -2px;
+    }
+    
+    .element {
+      right: 2px;
+      bottom: 2px;
+    }
+    
+    .at_num,
+    .at_details {
+      font-size: 4px;
+      opacity: 1;
+    }
+  
+    .symbol {
+      margin-top: -17px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 30px;
+      height: 30px;
+      color: rgba(255,255,255,0.75);
+      text-shadow: 0 0 4px rgba(255,255,255,0.5);
+    }
+  }
+  
+  // tablet landscape or small laptop
+  @media (min-width: 800px) {
+    .periodic {
+      height: 540px;
+    }
+  
+    .symbol {
+      font-size: 20px;
+    }
+  }
+  
+  // normal screen
+  @media (min-width: 992px) {
+    .periodic {
+      height: 680px;
+    }
+    
+    .at_num,
+    .at_details {
+      font-size: 5px;
+    }
+  
+    .symbol {
+      font-size: 24px;
+    }
+  }
+  
+  // large screen
+  @media (min-width: 1200px) {
+    .periodic {
+      height: 800px;
+    }
+    
+    .at_num,
+    .at_details {
+      font-size: 6px;
+    }
+  
+    .symbol {
+      font-size: 30px;
+    }
+  }
+  body{
+    margin: 0;
+}
+.container{
+    margin: 0 auto;
+    width: 85%;
+}
+.container1{
+    /* padding-top: 85px; */
+    margin: 0 auto;
+    width: 85%;
+}
+.menuber{
+
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    /* background: rgb(0, 0, 0); */
+}
+.text-top{
+    padding-top: 21px;
+    color: rgb(255, 255, 255);
+    font-family: 'Satisfy', cursive;
+    font-size: 32px;
+    float: left;
+}
+.menu{
+  padding-top: 15px;
+}
+.menu ul{
+    padding-top: 15px;
+    float: right;
+    list-style: none;
+}
+.menu ul li {
+    float: left;
+    padding-left: 25px;
+}
+.menu ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+
+}
+.menu li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transform: border 2s;  
+      
+  }
+  .img_bg_Top{
+    width: 100%;
+  height: 300px;
+  background: url("../../../img/thumb.png") no-repeat;
+  background-position-y: -160px; 
+  background-size: cover;
+}
+
+.img_bg_Top_text{
+  font-family: 'Mitr', sans-serif;
+  text-shadow: 2px 2px #000000;
+    padding-top: 200px;
+    padding-left: 100px;
+    font-size: 50px;
+    color: #ffffff;
+}
+footer{ 
+  padding-top: 90px;
+  background-color: rgb(54, 54, 54);
+  width: 100%;
+  height: 300px;
+  color: #ffffff;
+}
+.contact_foot{
+font-family: 'Mitr', sans-serif;
+height: 300px;
+width:  34%;
+float: left;
+}
+.contact_foot h2{
+font-family: 'Satisfy', cursive;
+padding-left: 20px;
+font-size: 30px;
+}
+.contact_name{
+padding-left: 35px; 
+font-size: 15px;
+}
+.contact_name img{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.copyright_th{
+  text-align: center;
+padding-right: 80px;
+}
+.menu_foot{
+height: 300px;
+width:  34%;
+float: left;
+}
+.menu_foot h2{
+font-family: 'Mitr', sans-serif;
+}
+.menu_foot hr{
+width: 400px;
+}
+.menu_foot_a{
+  padding-left: 20px;
+}
+.menu_foot_a a{
+  text-decoration: none;
+  font-family: 'Mitr', sans-serif;
+  color: #ffffff;
+font-size: 17px;
+}
+.copyright_en{
+padding-top: 15px;
+width: 400px;
+font-family: 'Mitr', sans-serif;
+text-align: center;
+font-size: 13px;
+}
+.map_foot{
+height: 300px;
+width:  30%;
+float: left;
+}
+.map_foot h2{
+font-family: 'Mitr', sans-serif;
+}
+.angle-down{
+margin-left: auto;
+margin-right: auto;
+margin-top: 9%;
+width: 4%;
+height:7%;
+border:2px solid #ffffff;     
+border-radius: 50%;
+cursor: pointer;
+color: #ffffff;
+transition:background 1s,color 1s,width 1s,height 1s; 
+}
+.angle-down:hover{
+width: 5%;
+height:9%;
+background: #ffffff;
+color: #000000cc;
+}
+.angle-down-i{ 
+height:100%;
+/* border: 1px solid #000000; */
+
+}
+.angle-down-i1 a{
+color: #ffffff;
+}
+.angle-down-i1{
+padding-top: 5px;
+padding-left: 13px;
+}
+.angle-down-i1:hover{
+padding-top: 13px;
+padding-left: 20px;
+}
+.angle-down-i1 a:hover{    
+color: #000000;
+}

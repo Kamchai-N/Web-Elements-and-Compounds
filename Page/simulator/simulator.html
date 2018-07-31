@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lab Simulator :: ห้องทดลอง</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style_simulator.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mitr" rel="stylesheet">
+    <script>
+        function back_over(){
+            document.getElementById('txt_back').innerHTML="ย้อนกลับ";
+        }
+        function back_out(){
+            document.getElementById('txt_back').innerHTML=" ";
+        }
+         /* Set the width of the side navigation to 250px */
+         function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <div class="bar">
+        <table>
+            <tr>
+                <td width="600px">
+                     <div class="back" onmouseover="back_over()" onmouseout="back_out()">
+                        <a href="../index.html"><</a>
+                        <a href="../index.html" id="txt_back"></a>
+                     </div>
+                </td>
+                <td width="680px">
+                     <div class="txt">
+                         <h2>Lab Simulator</h2>
+                    </div>
+                </td>
+                <td>
+                    <div class="icon_setting" onclick="openNav()">
+                        <img src="../img/setting_white.png">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h2>Color</h2>
+                <a href="#"></a>
+        </div> -->
+    </div>
+    <div class="menu1">
+        <table>
+            <tr>
+                <td width="10px"></td>
+                <td width="80px"><div class="but"><a href="#">a</a></div></td>
+                <td width="80px"><div class="but"><a href="#">a</a></td>
+                <td width="80px"><div class="but"><a href="#">a</a></td>
+                <td width="80px"><div class="but"><a href="#">a</a></td>
+                <td width="80px"><div class="but"><a href="#">a</a></td>
+                <td width="80px"><div class="but"><a href="#">a</a></td>
+                <td width="80px"><div class="but"><a href="#">a</a></td>                
+            </tr>
+        </table>
+    </div>
+    <div class="menu2">
+            <table>
+                <tr>
+                    <td width="80px"><div class="but1"><a href="#">a</a></div></td>                
+                </tr>
+                <tr>
+                    <td width="80px"><div class="but1"><a href="#">a</a></div></td>                
+                </tr>
+                <tr>
+                    <td width="80px"><div class="but1"><a href="#">a</a></div></td>                
+                </tr>
+                <tr>
+                    <td width="80px"><div class="but1"><a href="#">a</a></div></td>                
+                </tr>
+                <tr>
+                    <td width="80px"><div class="but1"><a href="#">a</a></div></td>                
+                </tr>
+                <tr>
+                    <td width="80px"><div class="but1"><a href="#">a</a></div></td>                
+                </tr>
+            </table>
+    </div>
+    <div class="dashboard">
+        <div class="beaker">
+            <div id="container">
+                <div id="beaker">
+                  <div id="liquid">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                  </div>
+                </div>
+              </div>    
+        </div>
+    </div>
+</body>
+</html>
