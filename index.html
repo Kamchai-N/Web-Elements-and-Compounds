@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mitr" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="img/animate.css">
     <script>
@@ -36,6 +36,11 @@
                 $('.contant3-box3').addClass(a);
             }
         });
+        $(document).ready(function(){
+            $('.bars').click(function(){
+                $('ul').toggleClass('active').css('transition', 'background 1s');
+            });
+        });
     </script>
 </head>
 
@@ -46,9 +51,14 @@
     <header>
         <div class="area-main">
             <div class="menu">
+               
+                <i class="fas fa-bars"></i>
                 <div class="container">
                     <div class="txt-lowgo">
                         <h1>Elements and Compounds</h1>
+                    </div> 
+                    <div class="toggle">
+                        <img src="img/bars-solid.svg" width="25px" height="25px" class="bars">
                     </div>
                     <nav role="navigation" class="navigation">
                         <ul>

@@ -26,7 +26,8 @@ header{
     /* position: absolute; */
     width:100%;
     height: 700px;
-    background: url("img/about_bates_chemical.jpg") no-repeat;
+    background: url("img/about_bates_chemical.jpg");
+
     /* background: url(img/chiangmai-riverside2.jpg); */
     background-size:cover; 
     object-fit: fill;
@@ -110,14 +111,14 @@ a {
     color: rgb(255, 255, 255);
     font-family: 'Mitr', sans-serif;
     padding-top: 250px;
-    padding-left: 220px;
+    text-align: center;
     font-size: 45px;
   }
   .txt-area h2{
     text-shadow: 2px 4px #0000008e;
     color: rgb(255, 255, 255);
     font-family: 'Tajawal', sans-serif;
-    margin-left: 510px;
+    text-align: center;
     font-size: 30px;
   }
   .contant1{
@@ -125,12 +126,12 @@ a {
   }
   .contant1-head{ 
     font-family: 'Tajawal', sans-serif; 
-    margin-left: 35%;
+    text-align: center;
     font-size: 30px;
     padding-top: 30px;
   }
   .contant1-box1,.contant1-box2,.contant1-box3{
-    padding-top:20px;
+    /* padding-top:20px; */
     width: 28%;
     height: 300px;
     /* border: 1px solid #000000; */
@@ -140,7 +141,7 @@ a {
   .contant2{
     width: 100%;
     height: 300px;
-    background: url(img/thumb.png);
+    background: url(img/thumb.png) no-repeat;
     background-size: cover;
     background-position-x: 500px;
     background-position-y: -120px;;
@@ -149,9 +150,8 @@ a {
     width: 50%;
     height: 400px;
     background: #363636;
-    padding-top: 25px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
     font-size: 20px;
     font-family: 'Mitr', sans-serif;
     color: #ffffff;
@@ -334,8 +334,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     margin-top: 9%;
-    width: 4%;
-    height:7%;
+    width: 50px;
+    height:50px;
     border:2px solid #ffffff;     
     border-radius: 50%;
     cursor: pointer;
@@ -378,4 +378,39 @@ a {
     padding-right: 10px;
     border-radius: 5px;
     /* padding-bottom: 10px; */
+  }
+  .toggle{
+    width: 100%;
+    padding: 10px 20px;
+    /* background: #000011; */
+    text-align: right;
+    box-sizing:border-box;
+    display: none;
+  }
+  @media (max-width:850px){
+    .toggle{
+      display: block;
+    }
+    ul{
+      display: none;
+    }
+    li{
+      width: 100%;
+      /* background: rgb(106, 225, 255); */
+      display: block;
+      text-align: center;
+    }
+    .active{
+      display: block;
+    }
+    .contant2_l{
+      font-size: 15px;
+    }
+    .contant2{
+      background-position-x: 350px;
+      background-position-y: -50px;;
+    }
+  }
+  .bars:hover{
+    cursor: pointer;
   }
