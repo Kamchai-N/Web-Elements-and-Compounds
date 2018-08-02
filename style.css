@@ -396,7 +396,7 @@ a {
     }
     li{
       width: 100%;
-      /* background: rgb(106, 225, 255); */
+      background: #000;
       display: block;
       text-align: center;
     }
@@ -409,6 +409,13 @@ a {
     .contant2{
       background-position-x: 350px;
       background-position-y: -50px;;
+    }
+    .contant3_Box1,.contant3_Box2,.contant3_Box3{
+      /* padding-top:20px; */
+      width: 28%;
+      height: 250px;
+      background-repeat: no-repeat;
+      background-position-x: -130px;
     }
   }
   .bars:hover{
