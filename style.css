@@ -294,7 +294,6 @@ a {
   }
   .copyright_th{
       text-align: center;
-    padding-right: 80px;
   }
   .menu_foot{
     height: 300px;
@@ -417,6 +416,21 @@ a {
       background-repeat: no-repeat;
       background-position-x: -130px;
     }
+    .overlay{
+      width: 82%;
+    }
+    footer{ 
+      height: 500px;
+  }
+  .map_foot{
+    /* height: 300px;
+    width:  30%; */
+    float: none;
+    padding-left: 300px;
+  }
+  .map{
+    height: 130px;
+  }
   }
   .bars:hover{
     cursor: pointer;
