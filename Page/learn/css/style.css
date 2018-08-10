@@ -121,7 +121,9 @@ body{
         border: 1px solid #363636;
     }
     
-    .pagination a:hover:not(.active) {background-color: #ddd;}
+    .pagination a:hover:not(.active) {
+      background-color: #ddd;
+    }
     
     .pagination a:first-child {
         border-top-left-radius: 5px;
@@ -272,3 +274,85 @@ body{
           font-size: 50px;
           color: #ffffff;
       }
+      .toggle{
+        width: 100%;
+        padding: 30px 20px;
+        /* background: #000011; */
+        text-align: right;
+        box-sizing:border-box;
+        display: none;
+      }
+      @media (max-width:850px){
+        .toggle{
+          display: block;
+        }
+        ul{
+          display: none;
+        }
+        li{
+          width: 100%;
+          background: #000;
+          display: block;
+          text-align: center;
+          padding-top: 10px;
+
+        }
+        .active{
+          display: block;
+        }
+        .contant2_l{
+          font-size: 15px;
+        }
+        .contant2{
+          background-position-x: 350px;
+          background-position-y: -50px;;
+        }
+        .contant3_Box1,.contant3_Box2,.contant3_Box3{
+          /* padding-top:20px; */
+          width: 28%;
+          height: 250px;
+          background-repeat: no-repeat;
+          background-position-x: -130px;
+        }
+        .overlay{
+          width: 82%;
+        }
+        footer{ 
+          height: 500px;
+      }
+      .map_foot{
+        /* height: 300px;
+        width:  30%; */
+        float: none;
+        padding-left: 300px;
+      }
+      .map{
+        height: 130px;
+      }
+      .img_bg_Top{
+        background-position-y: 0px;
+      }
+      .box-img-1,.box-img-2,.box-img-3,.box-img-4{
+        width: 400px;
+      }
+      .box-txt-main{
+        display: none;
+      }
+      .box-txt-top{
+        padding-left: -50px;
+      }
+      .box-txt{
+        margin-left: 450px;
+      }
+      .container1 hr{
+        margin-top: 90px;
+        margin-bottom: 30px;
+      }
+      .center {
+        padding-left: 300px;
+      }
+      .map{
+        height: 110px;
+      }
+    }
+    

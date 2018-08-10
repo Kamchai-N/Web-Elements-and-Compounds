@@ -31,6 +31,11 @@
                     $('.menuber').css('background', 'none');
                 }
             });
+            $(document).ready(function(){
+            $('.bars').click(function(){
+                $('ul').toggleClass('active').css('transition', 'background 1s');
+            });
+        });
         function bt1(){
             // location.reload("../detailLearn/01_substances.html");
             location.href = "../detailLearn/13_electricity.html";
@@ -49,6 +54,9 @@
         <div class="container">
             <div class="text-top">
                 Elements and Compounds
+            </div>
+            <div class="toggle">
+                <img src="../../img/bars-solid.svg" width="25px" height="25px" class="bars">
             </div>
             <div class="menu">
                 <ul>
