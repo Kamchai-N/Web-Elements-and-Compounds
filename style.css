@@ -131,6 +131,7 @@ a {
     padding-top: 30px;
   }
   .contant1-box1,.contant1-box2,.contant1-box3{
+    
     /* padding-top:20px; */
     width: 28%;
     height: 300px;
@@ -178,8 +179,9 @@ a {
     
   }
   .contant3_Box1{
-    background: url("img/117970880.jpg");
+    background: url("img/WeHave1.PNG");
     background-size: cover;
+    background-position-x: -10px;
     width: 30%;
     margin-left: 60px;
     height: 300px;
@@ -187,8 +189,9 @@ a {
 
   }
   .contant3_Box2{
-    background: url("img/117970880.jpg");
+    background: url("img/WeHave2.PNG");
     background-size: cover;
+    background-position-x: -55px;
     width: 30%;
     height: 300px;
     float: left;
