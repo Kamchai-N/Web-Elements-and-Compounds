@@ -11,17 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Mitr" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .box-img-1 {
-            background: url("../../img/bg_s_13.png");
-        }
-
-        .box-img-2 {
-            background: url("../../img/bg_s_14.png");
-        }
-    </style>
-     <script>
-          $(window).scroll(function () {
+    <script>
+         $(window).scroll(function () {
                 var scrollTop = $(this).scrollTop();
                 console.log(scrollTop);
                 if (scrollTop >= 150) {
@@ -31,18 +22,11 @@
                     $('.menuber').css('background', 'none');
                 }
             });
-            $(document).ready(function(){
+        $(document).ready(function(){
             $('.bars').click(function(){
                 $('ul').toggleClass('active').css('transition', 'background 1s');
             });
         });
-        function bt1(){
-            // location.reload("../detailLearn/01_substances.html");
-            location.href = "../detailLearn/13_electricity.html";
-        }
-        function bt2(){
-            location.href = "../detailLearn/14_industry.html";
-        }
     </script>
 </head>
 
@@ -70,7 +54,7 @@
                         <a href="../periodictable/periodictable.html">ตารางธาตุ</a>
                     </li>
                     <li>
-                        <a href="../lab/lab.html">ห้องทดลอง</a>
+                        <a href="#">ห้องทดลอง</a>
                     </li>
                     <li>
                         <a href="../../Page/about/about.html">เกี่ยวกับ</a>
@@ -80,54 +64,15 @@
         </div>
     </div>
     <div class="img_bg_Top">
-            <div class="img_bg_Top_text">
-                เรียนรู้ธาตุและสารประกอบ
-            </div>
+        <div class="img_bg_Top_text">
+            ห้องทดลอง
         </div>
-        <br>
-    <div class="container1">
-        <div class="box">
-            <div class="box-img-1">
+    </div>
+    <div class="container">
+        <div class="main">
+            <button class="button button5">ห้องทดลองที่ 1</button>
+            <button class="button button6">ห้องทดลองที่ 2</button>
 
-            </div>
-            <div class="box-txt">
-                <div class="box-txt-top">
-                    <a href="../detailLearn/13_electricity.html">ไฟฟ้าเคมี</a>
-                </div>
-                <div class="box-txt-main">
-                    ค่าประจุไฟฟ้าที่สมมติขึ้นของไอออนหรืออะตอมของธาตุ โดยคิดจากจำนวนอิเล็กตรอนที่ให้หรือรับหรือใช้ร่วมกับอะตอมของธาตุตามเกณฑ์ที่กำหนดขึ้น
-                    เลขออกซิเดชันส่วนใหญ่เป็นเลขจำนวนเต็มบวกหรือลบหรือศูนย์ในสารประกอบไอออนิกอะตอมมีการให้และรับอิเล็กตรอนแล้วกลายเป็นไอออนบวกและไอออนลบ
-                </div>
-                <br>
-                <button class="button button1" onclick="bt1()">ดูข้อมูล</button>
-            </div>
-            <hr>
-        </div>
-        <div class="box">
-            <div class="box-img-2">
-
-            </div>
-            <div class="box-txt">
-                <div class="box-txt-top">
-                    <a href="../detailLearn/14_industry.html">ธาตุและสารประกอบในอุตสาหกรรม</a>
-                </div>
-                <div class="box-txt-main">
-                    ธาตุหรือสารประกอบที่เกิดขึ้นตามธรรมชาติ โดยกระบวนการทางธรณีวิทยาภายในโลกและที่ผิวโลกมีองค์ประกอบเป็นช่วงมีโครงสร้างและองค์ประกอบเฉพาะตัวส่วนสินแร่
-                    คือ กลุ่มของแร่ต่าง ๆ ที่มีปริมาณมากพอในเชิงเศรษฐกิจซึ่งสามารถใช้เป็นวัตถุดิบในการหลอมเหลวหรือถลุง เพื่อให้ได้โลหะแร่หลักชนิดต่าง
-                    ๆ จำแนกตามองค์ประกอบทางเคมี
-                </div>
-                <br>
-                <button class="button button1" onclick="bt2()">ดูข้อมูล</button>
-            </div>
-        </div>
-        <br>
-        <div class="pagination center">
-            <a href="../../Page/learn/mainlern3.html">&laquo;</a>
-            <a href="../../Page/learn/mainlern1.html">1</a>
-            <a href="../../Page/learn/mainlern2.html">2</a>
-            <a href="../../Page/learn/mainlern3.html">3</a>
-            <a class="active" href="../../Page/learn/mainlern4.html">4</a>
-            <a href="#">&raquo;</a>
         </div>
     </div>
     <footer>
