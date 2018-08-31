@@ -198,7 +198,8 @@ a {
 
   }
   .contant3_Box3{
-    background: url("img/117970880.jpg");
+    background: url("img/WeHave3.PNG");
+    background-position-x: -55px;
     background-size: cover;
     width: 30%;
     height: 300px;

@@ -358,14 +358,14 @@ body{
     }
 
     .main{
-      height: 300px;
+      height: 550px;
       /* width: 100%;
       background:rgba(253, 74, 74, 0); */
     }
     .button5 {
       font-size: 24px;
       margin-top: 120px;
-      margin-left:250px;
+      margin-left:500px;
     }
     .button6 {
       font-size: 24px;
